@@ -1,12 +1,12 @@
+repositories {
+    google()  // 添加 Google 仓库
+    mavenCentral()  // 确保添加 Maven Central 仓库
+}
+
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
     id("io.realm.kotlin") version "1.16.0"
-}
-
-repositories {
-    google()  // 如果还没有这个，添加 Google 仓库
-    mavenCentral()  // 确保配置了 mavenCentral 仓库，这样可以找到 Realm 插件
 }
 
 android {
