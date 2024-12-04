@@ -14,4 +14,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "lbeim_sdk"
-include(":LbeIMSdk")
+include(":lbeim_sdk", ":LbeIMSdk")
+project(":LbeIMSdk").projectDir = file("/Users/haishuangsu/flutter_workspace/LbeIM/lbeim_sdk/android/LbeIMSdk")
