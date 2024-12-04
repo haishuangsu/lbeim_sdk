@@ -6,26 +6,26 @@ plugins {
 group = "com.lbeim.lbeim_sdk"
 version = "1.0-SNAPSHOT"
 
-buildscript {
-    val kotlin_version by extra("1.7.10")
+//buildscript {
+//    val kotlin_version by extra("1.7.10")
+//
+//    repositories {
+//        google()
+//        mavenCentral()
+//    }
+//
+//    dependencies {
+//        classpath("com.android.tools.build:gradle:7.3.1")
+//        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
+//    }
+//}
 
-    repositories {
-        google()
-        mavenCentral()
-    }
-
-    dependencies {
-        classpath("com.android.tools.build:gradle:7.3.1")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
-    }
-}
-
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
+//allprojects {
+//    repositories {
+//        google()
+//        mavenCentral()
+//    }
+//}
 
 
 android {
@@ -53,18 +53,6 @@ android {
     dependencies {
         testImplementation("org.jetbrains.kotlin:kotlin-test")
         testImplementation("org.mockito:mockito-core:5.0.0")
-    }
-
-    testOptions {
-        unitTests.all {
-            useJUnitPlatform()
-
-            testLogging {
-                events("passed", "skipped", "failed", "standardOut", "standardError")
-                outputs.upToDateWhen { false }
-                isShowStandardStreams = true
-            }
-        }
     }
 }
 
