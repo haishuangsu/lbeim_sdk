@@ -1,7 +1,7 @@
-repositories {
-    google()  // 添加 Google 仓库
-    mavenCentral()  // 确保添加 Maven Central 仓库
-}
+//repositories {
+//    google()  // 添加 Google 仓库
+//    mavenCentral()  // 确保添加 Maven Central 仓库
+//}
 
 plugins {
     id("com.android.library")
@@ -113,6 +113,7 @@ dependencies {
 
     // Realm
     implementation("io.realm.kotlin:library-base:1.16.0")
+//    classpath("io.realm.kotlin:io.realm.kotlin.gradle.plugin:1.16.0")
 
     implementation("com.google.accompanist:accompanist-permissions:0.36.0")
 }

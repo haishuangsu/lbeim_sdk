@@ -1,7 +1,15 @@
 pluginManagement {
     repositories {
-        google()  // 确保配置了 Google 的插件仓库
-        mavenCentral()  // 配置 Maven Central 仓库
+        google()
+        mavenCentral()
+        gradlePluginPortal() // 添加 Gradle Plugin Portal 作为备选仓库
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
     }
 }
 
