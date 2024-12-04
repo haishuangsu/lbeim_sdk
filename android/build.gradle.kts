@@ -1,36 +1,32 @@
+plugins {
+    id("com.android.library") version "7.3.1"
+    id("org.jetbrains.kotlin.android") version "1.7.10"
+}
+
 group = "com.lbeim.lbeim_sdk"
 version = "1.0-SNAPSHOT"
 
-//buildscript {
-//    val kotlin_version by extra("1.7.10")
-//
-//    repositories {
-//        google()
-//        mavenCentral()
-//    }
-//
-//    dependencies {
-//        classpath("com.android.tools.build:gradle:7.3.1")
-//        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
-//    }
-//}
-//
-//allprojects {
-//    repositories {
-//        google()
-//        mavenCentral()
-//    }
-//}
+buildscript {
+    val kotlin_version by extra("1.7.10")
 
-//plugins {
-//    id("com.android.library")
-//    id("org.jetbrains.kotlin.android")
-//}
+    repositories {
+        google()
+        mavenCentral()
+    }
 
-plugins {
-    id("com.android.library")
-    id("org.jetbrains.kotlin.android")
+    dependencies {
+        classpath("com.android.tools.build:gradle:7.3.1")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
+    }
 }
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
 
 android {
     namespace = "com.lbeim.lbeim_sdk"
@@ -76,7 +72,7 @@ dependencies {
     implementation("com.google.code.gson:gson:2.11.0")
     // 引入 LbeIMSdk 库作为依赖
     implementation(project(":LbeIMSdk"))
-    
+
     // implementation(files("libs/LbeIMSdk-debug.aar"))
     // implementation("com.github.haishuangsu:LbeAndroidSdk:1.0.0")
 }
